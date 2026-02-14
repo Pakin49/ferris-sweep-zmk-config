@@ -42,6 +42,7 @@
             tapping-term-ms = <TAPPING_TERM>;
             bindings = <&mo>, <&kp>;
             quick-tap-ms = <QUICK_TAP>;
+            hold-trigger-on-release;
         };
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -111,10 +112,10 @@
                     &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L     &kp U        &kp Y      &kp SEMI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    A     │    R     │    S     │    T     │    G     │   │    M     │    N     │    E     │    I     │    O     │
-                    HRML( A,     R,        S,           T)    &lts MEDIA G   &lts FUN M  HRMR(N,      E,        I,         O)
+                    HRML( A,     R,        S,           T)       &kp G         &kp M  HRMR(N,      E,        I,         O)
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    Z     │    X     │    C     │    D     │    V     │   │    K     │    H     │ , <      │ . >      │ / ?      │
-                    &kp Z       &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+                   &lts MEDIA Z  &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT  &lts FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                    &lt NAV TAB &lt MOUSE BSPC  &lt SYM SPACE &lt NUM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -162,7 +163,7 @@
                     &kp F12     &kp F7     &kp F8     &kp F9    &kp PSCRN      &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│   F11    │   F1     │   F2     │   F3     │          │   │          │          │          │          │          │
-                    &kp F11     &kp F1     &kp F2     &kp F3    &kp CAPS       &none      &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI
+                    &kp F11     &kp F1     &kp F2     &kp F3    &kp CAPS       &none      &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│   F10    │   F4     │   F5     │   F6     │          │   │          │          │          │          │          │
                     &kp F10     &kp F4     &kp F5     &kp F6     &kp INS         &none      &none      &none      &none      &none
@@ -182,7 +183,7 @@
                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none     &none          &kp END    &kp PG_DN  &kp PG_UP   &kp END   &kp ENTER
+                    &none       &none      &none      &none     &none          &kp HOME  &kp PG_DN  &kp PG_UP   &kp END   &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &none      &mo MOUSE
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
