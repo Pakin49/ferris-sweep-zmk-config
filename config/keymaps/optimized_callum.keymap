@@ -68,7 +68,7 @@
                 //│    Z     │    X     │    C     │    D     │    V     │   │    K     │    H     │ , <      │ . >      │    ;     │
                     &kp Z       &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT    &kp SEMI
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV ESC &kp LSHFT      &kp SPACE &lt SYM ENTER
+                                                   &mo NAV     &kp LSHFT      &kp SPACE &mo SYM 
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -94,14 +94,14 @@
         symbol{
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│    !     │    @     │    #     │    !     │    %     │   |    ^     │    &     │    *     │    "     │    '
-                    &kp EXCL   &kp AT    &kp HASH    &kp EXCL  &kp PRCNT     &kp CARET   &kp    &kp ASTRK   &kp DQT   &kp SQT      
+                //│   TAB    │    [     │    {     │    (     │    ~     │   |    ^     │    )     │    }     │    ]     │    `
+                    &kp TAB    &kp LBKT   &kp LBRC   &kp LPAR   &kp TILDE     &kp CARET   &kp RPAR   &kp RBRC   &kp RBKT   &kp GRAVE      
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│   TAB    │    [     │    {     │    (     │    =     │   │    -     │          │          │          │          │
-                   &kp TAB     &kp LBKT   &kp LBRC   &kp LPAR   &kp EQUAL      &kp MINUS  &sk LSHFT  &sk LCTRL  &sk LALT   &sk LGUI
+                //│    -     │    *     │    =     │    _     │    $     │   │    #     │          │          │          │          │
+                   &kp MINUS  &kp ASTRK   &kp EQUAL &kp UNDER  &kp DLLR       &kp HASH  &sk LSHFT  &sk LCTRL  &sk LALT   &sk LGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    ~     │    ]     │    }     │    )     │    +     │   │          │    _     │    |     │    \     │    `     │
-                   &kp TILDE   &kp RBKT   &kp RBRC   &kp RPAR  &kp PLUS         &none     &kp UNDER &kp PIPE   &kp BSLH  &kp GRAVE
+                //│    +     │    |     │    @     │    /     │    %     │   │          │    \     │    &     │    \     │    !     │
+                   &kp PLUS    &kp PIPE   &kp AT     &kp SLASH  &kp PERCENT     &none     &kp BSLH  &kp AMPERSAND &kp QMARK &kp EXCL
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans      &trans         &trans     &trans
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
