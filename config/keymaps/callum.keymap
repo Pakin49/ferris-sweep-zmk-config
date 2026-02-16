@@ -35,7 +35,7 @@
           bindings = <&mo>, <&sk>;
           quick-tap-ms = <0>;
           require-prior-idle-ms = <80>;
-      }
+      };
     };
 
     combos {
