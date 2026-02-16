@@ -10,6 +10,7 @@
 #define NUM 3
 #define SETTINGS 4
 
+#define MEH LALT(LCTRL(LSHFT))
 &sk {
     release-after-ms = <3000>;
 };
@@ -25,18 +26,20 @@
             quick-tap-ms = <0>;
             require-prior-idle-ms = <80>;
         };
+
+      lt_sk: layer_tap_sticky {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          flavor = "hold-preferred";
+          tapping-term-ms = <200>;
+          bindings = <&mo>, <&sk>;
+          quick-tap-ms = <0>;
+          require-prior-idle-ms = <80>;
+      }
     };
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <40>;
-            key-positions = <31 32>;
-            bindings = <&kp ESC>;
-            layers = <0>;
-            require-prior-idle-ms = <100>;
-        };
-
         combo_capword{
             timeout-ms = <40>;
             key-positions = <13 16>;
@@ -68,11 +71,10 @@
                 //│    Z     │    X     │    C     │    D     │    V     │   │    K     │    H     │ , <      │ . >      │    ;     │
                     &kp Z       &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT    &kp SEMI
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &kp LSHFT      &kp SPACE &lt SYM ENTER
+                                               &lt_sk NAV MEH &kp LSHFT      &kp SPACE &lt SYM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
         
         navigation{
             bindings = <
