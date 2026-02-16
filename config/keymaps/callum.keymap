@@ -10,9 +10,10 @@
 #define NUM 3
 #define SETTINGS 4
 
-#define MEH LA(LC(LS))
+#define MEH LA(LC(LSHFT))
 &sk {
     release-after-ms = <3000>;
+    lazy;
 };
 
 / {
