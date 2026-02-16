@@ -78,13 +78,13 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &kp ESC  &kp C_PREV  &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP  &kp PSCRN &kp K_PASTE &kp K_COPY &kp K_CUT &kp DEL
+                    &kp ESC    &none      &none   &kp C_VOL_DN &kp C_VOL_UP  &kp PSCRN &kp K_PASTE &kp K_COPY &kp K_CUT &kp DEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │  down    │   up     │  right   │          │
                     &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT &kp C_MUTE      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none    &kp C_BRI_DN &kp C_BRI_UP &kp HOME  &kp PG_DN  &kp PG_UP   &kp END   &kp ENTER
+                   &kp C_PP   &kp C_PREV  &kp C_NEXT &kp C_BRI_DN &kp C_BRI_UP &kp HOME  &kp PG_DN  &kp PG_UP   &kp END   &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans      &trans         &trans     &trans
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
