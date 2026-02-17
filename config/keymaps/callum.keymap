@@ -13,7 +13,6 @@
 #define MEH LA(LC(LSHFT))
 &sk {
     release-after-ms = <2000>;
-    lazy;
 };
 
 / {
@@ -22,7 +21,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             bindings = <&mo>, <&kp>;
             quick-tap-ms = <0>;
             require-prior-idle-ms = <80>;
@@ -32,7 +31,7 @@
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
           flavor = "hold-preferred";
-          tapping-term-ms = <200>;
+          tapping-term-ms = <180>;
           bindings = <&mo>, <&sk>;
           quick-tap-ms = <0>;
           require-prior-idle-ms = <80>;
