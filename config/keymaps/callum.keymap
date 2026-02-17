@@ -13,6 +13,7 @@
 #define MEH LA(LC(LSHFT))
 &sk {
     release-after-ms = <2000>;
+    lazy;
 };
 
 / {
@@ -40,11 +41,17 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_escape{
+            timeout-ms = <40>;
+            key-positions = <31 32>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <100>;
+        };
+
         combo_capword{
             timeout-ms = <40>;
             key-positions = <13 16>;
             bindings = <&caps_word>;
-            layers = <0>;
             require-prior-idle-ms = <100>;
         };
 
@@ -83,10 +90,10 @@
                     &kp ESC    &none      &none   &kp C_VOL_DN &kp C_VOL_UP  &kp PSCRN &kp K_PASTE &kp K_COPY &kp K_CUT &kp DEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │  down    │   up     │  right   │          │
-                    &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT &kp C_PP       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+                    &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT &kp C_PP        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                   &kp C_MUTE &kp C_PREV  &kp C_NEXT &kp C_BRI_DN &kp C_BRI_UP &kp HOME  &kp PG_DN  &kp PG_UP   &kp END   &kp ENTER
+                   &kp C_MUTE  &kp C_PREV  &kp C_NEXT &kp C_BRI_DN &kp C_BRI_UP &kp HOME  &kp PG_DN  &kp PG_UP   &kp END   &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &trans      &trans         &trans     &trans
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -113,14 +120,14 @@
         number{
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│    7     │    5     │    3     │    1     │    9     │   │    0     │    2     │    4     │    6     │    8     │
-                     &kp N7     &kp N5     &kp N3     &kp N1     &kp N9         &kp N0     &kp N2     &kp N4     &kp N6    &kp N8
+                //│    1     │    2     │    3     │    4     │    5     │   │    6     │    7     │    8     │    9     │    0     │
+                     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │   F11    │   │   F12    │          │          │          │          │
                     &sk LGUI   &sk LALT    &sk LCTRL  &sk LSHFT &kp F11       &kp F12     &sk LSHFT  &sk LCTRL  &sk LALT   &sk LGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    F7    │    F5    │    F3    │    F1    │    F9    │   │          │          │          │          │          │
-                     &kp F7     &kp F5     &kp F3     &kp F1     &kp F9         &kp F10   &kp F2     &kp F4     &kp F6    &kp F8
+                //│    F1    │    F2    │    F3    │    F4    │    F5    │   │          │          │          │          │          │
+                     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp F6     &kp F7     &kp F8     &kp F9    &kp F10
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans      &trans         &trans     &trans
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
