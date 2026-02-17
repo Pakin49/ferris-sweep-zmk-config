@@ -10,7 +10,7 @@
 #define NUM 3
 #define SETTINGS 4
 
-#define LAUNCH LA(LCTRL))
+#define OPEN LA(LCTRL)
 &sk {
     release-after-ms = <2000>;
 };
@@ -77,7 +77,7 @@
                 //│    Z     │    X     │    C     │    D     │    V     │   │    K     │    H     │ , <      │ . >      │    ;     │
                     &kp Z       &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT    &kp SEMI
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                               &lt_sk NAV LAUNCH &kp LSHFT      &kp SPACE &lt SYM ENTER
+                                               &lt_sk NAV OPEN  &kp LSHFT      &kp SPACE &lt SYM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
