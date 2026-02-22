@@ -77,7 +77,7 @@
                 //│    Z     │    X     │    C     │    D     │    V     │   │    K     │    H     │ , <      │ . >      │    ;     │
                     &kp Z       &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT    &kp SEMI
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                               &lt NAV TAB  &kp LSHFT      &kp SPACE &lt SYM ENTER
+                                               &lt NAV BSPC  &kp LSHFT      &kp SPACE &lt SYM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
